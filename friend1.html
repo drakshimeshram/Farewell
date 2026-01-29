@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Prachi 💜</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  width:100vw;
+  background:#f3ede4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Georgia",serif;
+  overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;
+  height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px}
+
+/* LETTER */
+.letter{
+  position:absolute;
+  width:90%;
+  height:90%;
+  background:#faf6ef;
+  display:flex;
+  gap:20px;
+  padding:20px;
+  box-sizing:border-box;
+  opacity:0;
+  border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;
+  background:#fff3f0;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.photo-box img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:none;
+}
+.photo-box img.active{display:block}
+
+/* FINAL SLIDE (FIXED) */
+.final-slide{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:#fff3f0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:30px;
+  font-style:italic;
+  color:#6b4b3e;
+  z-index:5;
+}
+.final-slide.active{display:flex}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;
+  background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;
+  line-height:1.6;
+}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 24px;
+  border:none;
+  border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENVELOPE -->
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<!-- LETTER -->
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="photo1.jpg" class="active">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="f5.jpg">
+    <img src="f6.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+    <p>Pillu… my Prachu… 💞</p>
+    <p>There are some people who enter your life quietly, without any announcement, and then one day you realize they have become the center of your world. You came into my life through dance 💃, but you stayed as the person I built my days around. Somewhere between practice floors, mirrors, exhaustion, laughter, and shared silence, you became the one I trust with my entire existence. I don’t make decisions without telling you 🫶. I don’t feel complete until you know what’s happening in my life. You are not just involved in my story—you are a part of who I am 💗.</p>
+    <p>We are cry babies together 🥺. We cry, we laugh, we roast each other till our stomachs hurt 😂, but we never hurt each other where it matters. We never backstab. We never walk away. We hold each other gently, even when life isn’t gentle with us 🤍. You know everything—my love life 💌, my family drama, my fears, my breakdowns, my happiness. I know yours too. We don’t hide. We don’t pretend. Even something as simple as me having your password 🔐 is proof of the kind of trust we share—pure, fearless, unconditional.</p>
+    <p>Those out-of-station competitions will forever be my favorite memories 🚆✨. Train journeys where we forgot the rest of the world existed. Where we fed each other with our own hands 🍫, took care of each other like a mother would 🤱, and still acted like babies who needed comfort. Sleeping beside you felt safe 😴, like nothing could go wrong as long as you were there. Those moments weren’t just happy—they were healing 💫. They taught me what it feels like to be truly cared for.</p>
+    <p>Whenever I broke down, you never asked me to explain myself 😭. You didn’t need reasons. You just hugged me 🤗, and somehow that was enough. You are my comfort place, Prachu 🧿—the place my heart runs to when everything feels too heavy. With you, I am allowed to be weak. With you, I don’t have to be strong all the time 🤍.</p>
+    <p>And now… this farewell 💔. This part hurts the most. The thought that we won’t spend every break together anymore. That I won’t see you randomly, won’t sit with you, won’t laugh the same way every day. It feels like a part of my routine, my safety, my heart is being taken away 🥀. Life is moving us forward, but my heart is still holding on to you with both hands 🫂.</p>
+    <p>I want you to know this—no matter how far life takes us 🌍, no matter how busy things get, you will always be my person 💖. I will never forget you. I will never replace you. I will never let this bond fade into something small. You are not just a memory of school or dance or youth—you are a permanent part of my life 🪄.</p>
+    <p>If you ever feel low, if something hurts, if tears come without warning 😞—please message me 📱. Don’t cry alone. Even if I can’t hug you physically, my heart will always be right beside yours 💓. I will always listen. I will always care. I will always choose you 🤞. Distance can change places, but it can never change what you mean to me.</p>
+    <p>Pillu, you are my friend, my sister, my mother, my strength, my softness, my home 🏡💝. This is not goodbye for us. This is just life trying to test us—and I know our bond is stronger than any distance 🌈. Wherever I go, a part of me will always belong to you 💫. And wherever you go, remember that someone out there loves you more than words can ever explain 🥹🤍.</p>
+  </div>
+    <button id="nextBtn">Next →</button>
+  </div>
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+const envelope=document.getElementById("envelope");
+const letter=document.getElementById("letter");
+const song=document.getElementById("song");
+const imgs=document.querySelectorAll(".photo-box img");
+const finalSlide=document.getElementById("finalSlide");
+const typeText=document.getElementById("typeText");
+const nextBtn=document.getElementById("nextBtn");
+
+/* OPEN ENVELOPE */
+document.getElementById("seal").onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let i=0;
+let slideshow=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* TYPE EFFECT */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;
+    setTimeout(type,80);
+  }
+}
+
+/* NEXT BUTTON */
+nextBtn.onclick=()=>{
+  clearInterval(slideshow);            // STOP photos
+  imgs.forEach(img=>img.style.display="none");
+  finalSlide.classList.add("active");  // SHOW final slide
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

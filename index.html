@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Before You Begin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Body & Gradient ===== */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #e0c3fc, #cfd9ff); /* pastel lavender × baby blue */
+      color: #2f2f2f;
+    }
+
+    /* ===== Box Container ===== */
+    .box {
+      background: rgba(255, 255, 255, 0.85); /* soft translucent background */
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+      animation: fadeIn 2s ease;
+    }
+
+    /* ===== Headings & Text ===== */
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    /* ===== Buttons ===== */
+    button {
+      padding: 12px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 15px;
+    }
+
+    #yesBtn {
+      background: #9bbcd1; /* pastel blue button */
+      color: white;
+    }
+
+    #noBtn {
+      background: #f0f0f0; /* soft grey */
+      color: #444;
+    }
+
+    #msg {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* ===== Fade-in Animation ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Optional Button Hover ===== */
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Sorry to make you emotional</h1>
+    <p>But this comes straight from my heart…</p>
+    <p>Wanna begin?</p>
+
+    <button id="yesBtn" onclick="goNext()">Yes</button>
+    <button id="noBtn" onclick="makeYesBigger()">No</button>
+
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    let size = 18;
+
+    function makeYesBigger() {
+      size += 6;
+      document.getElementById("yesBtn").style.fontSize = size + "px";
+      document.getElementById("msg").innerText = "You have to open 😤";
+    }
+
+    function goNext() {
+      window.location.href = "message.html"; // Link to Page 2
+    }
+  </script>
+</body>
+</html>

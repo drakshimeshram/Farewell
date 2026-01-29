@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For you 💜</title>
+<style>
+body { margin:0; height:100vh; width:100vw; background:#f3ede4; display:flex; align-items:center; justify-content:center; font-family:"Georgia",serif; overflow:hidden; }
+.envelope { width:90%; height:90%; position:absolute; background:#e8dccb; border-radius:12px; box-shadow:0 15px 40px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; transition:opacity 1s ease; z-index:10; }
+.flap { position:absolute; width:100%; height:100%; background:#e2d4c1; clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 60%, 0 50%); z-index:5; }
+.seal { width:80px; height:80px; border-radius:50%; background:radial-gradient(circle at top left, #e7d9f0,#b9a6c9); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:15; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: inset 0 3px 6px rgba(255,255,255,0.5), inset 0 -5px 8px rgba(0,0,0,0.25), 0 6px 12px rgba(0,0,0,0.3); }
+.seal::before { content:"🧸"; font-size:32px; color:#6e5b82; }
+.letter { position:absolute; top:0; left:0; width:90%; height:90%; background:#faf6ef; z-index:5; display:flex; gap:20px; padding:20px; box-sizing:border-box; opacity:0; border-radius:12px; transition:opacity 1s ease; }
+.photo-box { flex:1; background:#fff3f0; border-radius:12px; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+.photo-box img { width:100%; height:100%; object-fit:contain; border-radius:12px; display:none; }
+.photo-box img.active { display:block; }
+.final-slide { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:28px; font-style:italic; color:#6b4b3e; text-align:center; display:none; }
+.final-slide.active { display:flex; }
+.text-box { flex:1; background:#fff9e5; border-radius:12px; padding:15px; box-sizing:border-box; overflow-y:auto; font-size:18px; line-height:1.6; color:#4f3b2a; }
+.text-box p { margin-bottom:16px; }
+#nextBtn { margin-top:20px; padding:10px 22px; border:none; border-radius:20px; background:#c9a98b; color:white; font-size:16px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+  <div class="photo-box">
+    <img src="81.jpg" class="active">
+    <img src="82.jpg">
+    <img src="83.jpg">
+    <img src="84.jpg">
+    <img src="85.jpg">
+    <img src="86.jpg">
+    <img src="87.jpg">
+    <img src="f88.jpg">
+    <img src="f812.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+  <div class="text-box">
+    
+<p>My Mansi… 🤍🫂</p>
+
+<p>Some people don’t come into your life with a long history or a thousand shared memories—but somehow, they still leave a very deep mark. You are exactly that person for me 💛. We didn’t grow up together from the start, we didn’t share every moment—but the moment you came into my life, you became special.</p>
+
+<p>We met through TED Talk classes in SCL 🎤✨—and honestly, who would’ve thought that place would give me a friend like you? Slowly, naturally, you became mutual, then closer, then someone I genuinely cared about. No force. No pretending. Just you being you, and me liking you exactly that way 🤍.</p>
+
+<p>You are super active, always full of energy ⚡😂. A little cringe? Yes 😭. But that’s the best part. Your cringe is real, pure, unfiltered—and that’s what makes you so lovable. You don’t try to act cool. You don’t try to impress. You are just… real. And in a world where everyone is trying to be something else, that is honestly so refreshing ✨.</p>
+
+<p>You are SO cute 🥹💛. The way you randomly hug me 🤗, kiss me 😘, hold me, and make me feel loved without saying much—it makes my heart feel warm every single time. Being with you feels light. Comfortable. Safe. Like I can just exist without thinking too much.</p>
+
+<p>Even though we may not have countless memories together, the moments we do have are full of warmth 🌸. Talking, laughing, sharing small things, standing together during dance, just being around each other—it all mattered more than you probably realize. Sometimes it’s not about how long you’ve known someone, but how good they make you feel when they’re around 💫.</p>
+
+<p>You bring such positive energy wherever you go 🌈. Your excitement, your expressions, your hugs, your presence—it changes the vibe instantly. You make spaces happier just by being in them, and I love that about you so much 🤍.</p>
+
+<p>This farewell feels strange 🥀. Because even though we didn’t share “everything,” you still became someone very close to my heart. And thinking that I won’t see you the same way, won’t get those sudden hugs and kisses as often—it hurts more than I expected 🤍.</p>
+
+<p>Mansi, I want you to always stay exactly the way you are 💛. Cringe. Hyper. Loving. Real. Cute. Don’t let the world dull that energy. It’s your magic ✨. Wherever life takes you next 🌍, I know you’ll make people smile just by being you.</p>
+
+<p>Thank you for the warmth, the love, the hugs, the kisses, and the comfort you gave me 🫂💖. Thank you for being a part of my life, even if quietly, even if briefly—but very meaningfully.</p>
+
+<p>I love you, Mansi 🤍. I’ll miss you and carry you with me in my heart, always 💫.</p>    <button id="nextBtn">Next →</button>
+  </div>
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick = () => {
+  envelope.style.opacity = '0';
+  setTimeout(() => {
+    envelope.style.display = 'none';
+    letter.style.opacity = '1';
+    song.play().catch(()=>{});
+  }, 1000);
+};
+
+/* PHOTO SLIDESHOW */
+let slides = document.querySelectorAll(".photo-box img");
+let index = 0;
+let slider = setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 2500);
+
+/* FINAL SLIDE + TYPE EFFECT */
+const text = "Thank you for being my special Mansi. 🤍💫 Thank you for everything.\n– Drakshi";
+let c = 0;
+function type() {
+  if(c < text.length){
+    typeText.innerHTML += text[c] === "\n" ? "<br>" : text[c];
+    c++;
+    setTimeout(type, 80);
+  }
+}
+
+nextBtn.onclick = () => {
+  clearInterval(slider);
+  slides.forEach(img => img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML = "";
+  c = 0;
+  type();
+};
+</script>
+
+</body>
+</html>

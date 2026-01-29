@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For you 💜</title>
+<style>
+body { margin:0; height:100vh; width:100vw; background:#f3ede4; display:flex; align-items:center; justify-content:center; font-family:"Georgia",serif; overflow:hidden; }
+.envelope { width:90%; height:90%; position:absolute; background:#e8dccb; border-radius:12px; box-shadow:0 15px 40px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; transition:opacity 1s ease; z-index:10; }
+.flap { position:absolute; width:100%; height:100%; background:#e2d4c1; clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 60%, 0 50%); z-index:5; }
+.seal { width:80px; height:80px; border-radius:50%; background:radial-gradient(circle at top left, #e7d9f0,#b9a6c9); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:15; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: inset 0 3px 6px rgba(255,255,255,0.5), inset 0 -5px 8px rgba(0,0,0,0.25), 0 6px 12px rgba(0,0,0,0.3); }
+.seal::before { content:"🧸"; font-size:32px; color:#6e5b82; }
+.letter { position:absolute; top:0; left:0; width:90%; height:90%; background:#faf6ef; z-index:5; display:flex; gap:20px; padding:20px; box-sizing:border-box; opacity:0; border-radius:12px; transition:opacity 1s ease; }
+.photo-box { flex:1; background:#fff3f0; border-radius:12px; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+.photo-box img { width:100%; height:100%; object-fit:contain; border-radius:12px; display:none; }
+.photo-box img.active { display:block; }
+.final-slide { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:28px; font-style:italic; color:#6b4b3e; text-align:center; display:none; }
+.final-slide.active { display:flex; }
+.text-box { flex:1; background:#fff9e5; border-radius:12px; padding:15px; box-sizing:border-box; overflow-y:auto; font-size:18px; line-height:1.6; color:#4f3b2a; }
+.text-box p { margin-bottom:16px; }
+#nextBtn { margin-top:20px; padding:10px 22px; border:none; border-radius:20px; background:#c9a98b; color:white; font-size:16px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+  <div class="photo-box">
+    <img src="91.jpg" class="active">
+    <img src="92.jpg">
+    <img src="93.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+  <div class="text-box">
+<p>My Atharv… my pain… my daily headache… my brother 🐭🐱😂</p>
+
+<p>I don’t even know where to start with you, because our bond never needed a starting point or a backstory. We didn’t have big “core memory” moments, no dramatic origin story—but somehow, you still became one of the closest people in my life 🤍. That’s the funniest part. No effort. No planning. Just pure chaos.</p>
+
+<p>You tease me like NO ONE ELSE 😭🔥. Like genuinely—no mercy, no warning, straight attack mode. Every conversation with you is either roasting, judging, or fighting for our lives with sarcasm 😂. Total Tom and Jerry energy 🐱🐭. We fight, we annoy, we irritate each other like professionals—but we still talk every single day. That says everything.</p>
+
+<p>Our daily talks became a habit I never realized I was so attached to 📱💬. Even if it’s nonsense, even if it’s roasting “like hell,” even if it’s just you pulling my leg for no reason—it matters. You matter. Life feels weirdly incomplete without that chaos.</p>
+
+<p>Competitions were different with you 🤍. Sitting together, holding hands 🤝—it felt so natural, so close, so comforting. No awkwardness. No overthinking. Just that silent understanding that “I’m here.” Those moments were small, but they meant a lot to me.</p>
+
+<p>You’re not the emotional type. You don’t talk in big dramatic lines. But somehow, your presence itself feels like protection 🛡️. Like even if we’re roasting each other to death, I know you’re on my side. Always.</p>
+
+<p>We may not have shared a thousand memories, but the connection we built through daily laughter, arguments, teasing, and random conversations is something I can never replace 💫. You’re irreplaceable, Atharv. Truly.</p>
+
+<p>This farewell hurts more than I expected 🥀. Because I know I’ll miss the constant roasting, the hand-holding moments, the sitting together, the “Tom and Jerry but inseparable” bond we have. I’ll miss you a lot—more than I’ll probably ever admit to your face 😤🤍.</p>
+
+<p>No matter where life takes us 🌍, I hope we never lose this bond. Fight, roast, tease—fine. But don’t disappear. Because you’re not just someone I talk to—you’re my brother.</p>
+<p>And one thing you should never forget—no matter what situation life throws at you, you are never alone 🤍. For anything, anytime, any mess, any problem—this sister of yours is always right here 🛡️🫂. You don’t have to think twice, you don’t have to hesitate. If you fall, I’ll stand beside you. If you’re confused, I’ll listen. If you need support, I’ll be there—silently or loudly, however you need. Always.</p>
+
+
+<p>Thank you for the chaos 😂. Thank you for the closeness 🤍. Thank you for being exactly the way you are. Life will change, places will change, but you’ll always have a special place with me.</p>
+
+<p>I’ll miss you a lot, idiot 🫂💙. Always.</p>
+
+<button id="nextBtn">Next →</button>
+  </div>
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick = () => {
+  envelope.style.opacity = '0';
+  setTimeout(() => {
+    envelope.style.display = 'none';
+    letter.style.opacity = '1';
+    song.play().catch(()=>{});
+  }, 1000);
+};
+
+/* PHOTO SLIDESHOW */
+let slides = document.querySelectorAll(".photo-box img");
+let index = 0;
+let slider = setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 2500);
+
+/* FINAL SLIDE + TYPE EFFECT */
+const text = "Thank you for being my chaotic, irreplaceable Atharv."Thank you for everything.\n– Drakshi";";
+let c = 0;
+function type() {
+  if(c < text.length){
+    typeText.innerHTML += text[c] === "\n" ? "<br>" : text[c];
+    c++;
+    setTimeout(type, 80);
+  }
+}
+
+nextBtn.onclick = () => {
+  clearInterval(slider);
+  slides.forEach(img => img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML = "";
+  c = 0;
+  type();
+};
+</script>
+
+</body>
+</html>

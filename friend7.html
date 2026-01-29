@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nivi 💛</title>
+<style>
+body{
+  margin:0;height:100vh;width:100vw;
+  background:#f3ede4;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Georgia",serif;overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;width:100%;height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;height:80px;border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px;color:#6e5b82}
+
+/* LETTER */
+.letter{
+  position:absolute;top:0;left:0;
+  width:90%;height:90%;
+  background:#faf6ef;
+  display:flex;gap:20px;
+  padding:20px;box-sizing:border-box;
+  opacity:0;border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;background:#fff3f0;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+.photo-box img,.final-slide{
+  width:100%;height:100%;
+  display:none;
+  align-items:center;justify-content:center;
+}
+.photo-box img{object-fit:contain}
+.photo-box img.active,
+.final-slide.active{display:flex}
+
+/* FINAL SLIDE */
+.final-slide{
+  font-size:28px;
+  font-style:italic;
+  color:#6b4b3e;
+  text-align:center;
+  padding:20px;
+}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;line-height:1.6;
+  color:#4f3b2a;
+}
+.text-box p{margin-bottom:16px}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="f71.jpg" class="active">
+    <img src="f72.jpg">
+    <img src="f73.jpg">
+    <img src="f74.jpg">
+    <img src="f712.jpg">
+    <img src="f75.jpg">
+    <img src="f76.jpg">
+    <img src="f77.jpg">
+    <img src="f78.jpg">
+    <img src="f79.jpg">
+    <img src="f80.jpg">
+    <img src="f811.jpg">
+    <img src="f812.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+<p>My Nivi… 💛🫂</p>
+
+<p>I don’t even know where to begin with you, because some people don’t just enter your life—they slowly become a part of your rhythm, like music you don’t notice at first but can’t imagine dancing without 🎶💃. You are one of those people for me. From being a part of the same dance group to becoming someone I genuinely love and adore, you’ve held such a special place in my heart 🤍.</p>
+
+<p>You are an incredible dancer—graceful, powerful, expressive ✨. Watching you dance always feels inspiring, like you’re speaking without words. There’s something so natural about the way you move, the way you feel the music, the way you give yourself completely to dance 💫. Being around someone like you makes dance feel even more magical.</p>
+
+<p>But what makes you even more special to me isn’t just your talent—it’s YOU 🫶. Your presence. Your warmth. Your smile. The comfort of knowing you’re there. Just like Gauri and Prachi, you’re someone I love deeply, someone who makes the group feel complete 🌈. With you around, practices felt lighter, laughter felt louder, and even tiring days somehow felt okay.</p>
+
+<p>Dance practices with you were never just about steps 💃. They were about shared glances, random laughter, small talks in between counts, and those moments where we were just ourselves. Standing together, practicing together, messing up together, laughing about it together 😂—those are the moments I’ll miss the most.</p>
+
+<p>You have this calm yet strong energy 🤍. You don’t always need to be loud to be noticed. Your presence itself speaks. You’re the kind of person who brings balance—softness with strength, fun with maturity, passion with patience ✨. Being around you always felt reassuring, like things were in control even when everything felt chaotic.</p>
+
+<p>It hurts to think that things won’t be the same anymore 🥀. That we won’t meet so often, won’t dance together the same way, won’t share those everyday little moments. Dance floors will feel a little emptier without you. Laughter will sound a little different. And my heart will definitely feel the absence 🤍.</p>
+
+<p>But even in this farewell, there’s so much gratitude 💛. Gratitude for every rehearsal, every laugh, every moment of support, every memory we created together. Not everyone gets to form bonds like this through dance—and I’m so glad I got that with you ✨.</p>
+
+<p>Nivi, wherever life takes you next 🌍, I know you’ll shine. Because you don’t just dance beautifully—you live beautifully. Carry your passion with pride, trust yourself, and never doubt how amazing you are 💫. Dance will always be a part of you, just like you’ll always be a part of my memories.</p>
+
+<p>This isn’t goodbye—it’s just life moving forward 🚶‍♀️🌈. Our bond, our memories, our love for dance will always keep us connected. No distance can take away what we’ve shared 🤞.</p>
+
+<p>Thank you for being you—for your talent, your kindness, your presence, and your heart 💖. I love you, Nivi. I’ll miss you more than words can explain 🫂✨.</p>
+
+
+<button id="nextBtn">Next →</button>
+  </div>
+
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let imgs=document.querySelectorAll(".photo-box img");
+let i=0;
+let slider=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* FINAL SLIDE + TYPE */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;setTimeout(type,80);
+  }
+}
+
+nextBtn.onclick=()=>{
+  clearInterval(slider);
+  imgs.forEach(img=>img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

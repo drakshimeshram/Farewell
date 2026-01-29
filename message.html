@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #e0c3fc, #cfd9ff); /* pastel lavender × baby blue */
+      color: #2f2f2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 750px;
+      background: rgba(255,255,255,0.85);
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      display: none; /* hide all paragraphs initially */
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    p.show {
+      display: block;
+      opacity: 1;
+    }
+
+    p.signature {
+      font-style: italic;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background: #9bbcd1;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio id="bgAudio" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h2>This is not a goodbye</h2>
+
+    <p id="para1">This page exists for the people who became my family without sharing my blood.
+I still can’t believe the day has come when we have to say “see you later” instead of our usual morning hellos in the corridors of SCL. From sitting together in those never-ending classes, sharing notes at the last minute, to laughing over the tiniest things during breaks, every moment has been unforgettable. You all weren’t just friends—you became my safe space, my family without blood, the people who knew me even when I didn’t. Thank you for every laugh, every inside joke, and every silly dare that made school feel like home.🎀✨</p>
+    <p id="para2">Life is taking us to different paths now, and that scares me more than I admit.
+Through every exam panic to disaster, and every late-night chat about dreams and fears, you all stood by me like pillars I could lean on. The bond we share isn’t something that can be measured by years—it’s in the countless memories we’ve created, the support we’ve given, and the love that’s been unconditional. Farewell is just a word; it can’t take away the feeling that a part of my heart will always be with you in SCL’s playgrounds, corridors, van and classrooms.🤧🧿</p>
+    <p id="para3">I will forever treasure the countless small moments: the way we cheered each other during PT, laughed through boring lectures, shared snacks, or just sat silently together when words weren’t needed. Each of you has left a mark on my heart that no distance or time can erase. You made the ordinary days extraordinary, and the difficult ones bearable. I can’t thank you enough for being the kind of friends who celebrate your victories, share your fears, and never let you feel alone.🫡😎</p>
+    <p id="para4" As we step into new chapters, I know life will take us on different paths, but nothing can break the bond we’ve built here. I’ll miss our laughter echoing in SCL’s halls, our crazy adventures, and the comfort of knowing that no matter what, you were always there. Thank you for being my heart outside my body, my laughter in dull moments, and my shoulder when I needed it the most. This farewell isn’t the end—it’s just a pause until we meet again, but you will always be my closest, my forever friends. The same place were we were together some one will just be a memory for me..😦😭
+class="signature">— Always by your side💌</p>
+
+    <button id="nextBtn">Next</button>
+  </div>
+
+  <script>
+    const paragraphs = [
+      document.getElementById('para1'),
+      document.getElementById('para2'),
+      document.getElementById('para3'),
+      document.getElementById('para4')
+    ];
+
+    let current = 0;
+    paragraphs[current].classList.add('show'); // show first paragraph
+
+    const btn = document.getElementById('nextBtn');
+
+    btn.addEventListener('click', () => {
+      paragraphs[current].classList.remove('show'); // hide current
+      current++;
+      if(current < paragraphs.length){
+        paragraphs[current].classList.add('show'); // show next
+      }
+      if(current === paragraphs.length - 1){
+        btn.innerText = "Finish"; // last paragraph
+      }
+     if(current >= paragraphs.length){
+    window.location.href = "passkey.html"; // go to passkey page
+}
+
+    });
+  </script>
+
+</body>
+</html>

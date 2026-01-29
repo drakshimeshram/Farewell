@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Batuk 💛</title>
+<style>
+body{
+  margin:0;height:100vh;width:100vw;
+  background:#f3ede4;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Georgia",serif;overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;width:100%;height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;height:80px;border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px;color:#6e5b82}
+
+/* LETTER */
+.letter{
+  position:absolute;top:0;left:0;
+  width:90%;height:90%;
+  background:#faf6ef;
+  display:flex;gap:20px;
+  padding:20px;box-sizing:border-box;
+  opacity:0;border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;background:#fff3f0;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+.photo-box img,.final-slide{
+  width:100%;height:100%;
+  display:none;
+  align-items:center;justify-content:center;
+}
+.photo-box img{object-fit:contain}
+.photo-box img.active,
+.final-slide.active{display:flex}
+
+/* FINAL SLIDE */
+.final-slide{
+  font-size:28px;
+  font-style:italic;
+  color:#6b4b3e;
+  text-align:center;
+  padding:20px;
+}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;line-height:1.6;
+  color:#4f3b2a;
+}
+.text-box p{margin-bottom:16px}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="f51.jpg" class="active">
+    <img src="f52.jpg">
+    <img src="f53.jpg">
+    <img src="f54.jpg">
+    <img src="f512.jpg">
+    <img src="f55.jpg">
+    <img src="f56.jpg">
+    <img src="f57.jpg">
+    <img src="f58.jpg">
+    <img src="f59.jpg">
+    <img src="f60.jpg">
+    <img src="f511.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+<p>My Batuk… my Gauri… my tiny menace 🤏💛</p>
+
+<p>I still don’t understand how someone so short can have such a BIG presence in my life 😭. You are chaos. Pure chaos. Loud, dramatic, annoying, lovable, and somehow the person I laugh with the most. With you, laughing is never normal—it’s stomach-hurting, breathless, “why are we like this?” kind of laughing 😂🫂.</p>
+
+<p>From the very beginning, you weren’t just a dance group member 💃—you were my batuk, my partner in crime, my full-time judge 🧐. We judge people together, situations together, and sometimes even each other 😌. I know all your secrets 🤫 and you know mine. No filters. No fake sweetness. Just raw honesty and chaos.</p>
+
+<p>Now let me officially roast you for a second because you deserve it 😭🔥. You are SHORT. Like, aggressively short 🤏. Yet somehow you walk around with the confidence of someone twice your height. You make the weirdest faces at the weirdest times 😏, overreact to literally everything, and your mind is permanently stuck in the madness💀. The way you turn the most innocent sentence into something dirty-minded—especially when I’m talking to Nano 🙈—is honestly a talent. I’ll be talking seriously and you’re already giving me THAT look, judging me like you know everything 😭😂. Bro don't forget maths love you the mostt🫡🤣🤣🤣</p>
+
+<p>And don’t even get me started on how you act lesbian with me 😭🏳️‍🌈. Random hugs 🤗. Sudden kisses 😘. Holding me. Sitting too close. Acting possessive. Claiming me like I’m yours. Saying things that make people stare at us suspiciously 👀. Half the time it’s embarrassing, half the time it’s hilarious, and somehow… it’s comforting too 💛.</p>
+
+<p>Your stories deserve their own award 😭📖. You don’t just tell stories—you perform them. Expressions, sound effects, pauses, dramatic gasps, weird faces, hand movements—everything. And no matter how long they are, I listen. Because somehow, with you, even nonsense feels special.</p>
+
+<p>Dance with you was never just dance 💃✨. Practices became fun because of your presence. Random hugs in between steps 🤗. Sudden kisses out of nowhere 😘. sticking on walls like lizards🦎. Laughing when we were supposed to be serious. You made even exhausting days feel lighter.</p>
+
+<p>And Physics Wallah coaching 🧪📚—even though we weren’t in the same class, you were still my constant escape there. Those canteen trips 🍔🥤. Sitting together, eating, gossiping, judging people, laughing, and forgetting stress for a while. Coaching would’ve been unbearable without those little breaks with you. Those canteen moments were small, but they meant so much.</p>
+
+<p>You are chaos, but you are also mature when it matters 💛. You joke, but you care deeply. You tease, but you protect. You laugh loudly, but you understand silently. That mix—your chaotic maturity—is what makes you YOU, and that’s why you’re so close to my heart ✨.</p>
+
+<p>I know I’ll miss you the most 🥀. Your hugs 🤗. Your kisses 😘. Your judging eyes 👀. Your dirty-minded comments. Your random visits. Your stories. Your presence. Everything.</p>
+
+<p>The thought of not spending so much time together hurts more than I expected 😞. Dance won’t feel the same. Laughing won’t feel the same. Even silence won’t feel the same without you. You weren’t just part of my routine—you WERE my routine 🫂.</p>
+
+<p>Batuk, you are not just my dance group member. You are my laughter, my chaos, my comfort, my judge, my hug-giver, my kiss-attacker, my fake-lesbian soulmate 😭💛.</p>
+
+<p>This farewell hurts, but I know this bond doesn’t end here 🌈. Distance can change places, not feelings. Wherever you go, you carry a piece of my heart with you 💓.</p>
+
+<p>I love you, you chaotic, dirty-minded, short, beautiful human 😭🫶. Thank you for every laugh, every hug, every story, and every canteen escape. I’ll miss you more than you know 💫.</p>
+
+    <button id="nextBtn">Next →</button>
+  </div>
+
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let imgs=document.querySelectorAll(".photo-box img");
+let i=0;
+let slider=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* FINAL SLIDE + TYPE */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;setTimeout(type,80);
+  }
+}
+
+nextBtn.onclick=()=>{
+  clearInterval(slider);
+  imgs.forEach(img=>img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

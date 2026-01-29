@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Swati 💛</title>
+
+<style>
+body{
+  margin:0;height:100vh;width:100vw;
+  background:#f3ede4;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Georgia",serif;overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;width:100%;height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;height:80px;border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px}
+
+/* LETTER */
+.letter{
+  position:absolute;top:0;left:0;
+  width:90%;height:90%;
+  background:#faf6ef;
+  display:flex;gap:20px;
+  padding:20px;box-sizing:border-box;
+  opacity:0;border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;background:#fff3f0;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.photo-box img,.final-slide{
+  width:100%;height:100%;
+  display:none;
+  align-items:center;justify-content:center;
+}
+.photo-box img{object-fit:contain}
+.photo-box img.active,
+.final-slide.active{display:flex}
+
+/* FINAL SLIDE */
+.final-slide{
+  font-size:28px;
+  font-style:italic;
+  color:#6b4b3e;
+  text-align:center;
+}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;line-height:1.6;
+  color:#4f3b2a;
+}
+.text-box p{margin-bottom:16px}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="f31.jpg" class="active">
+    <img src="f32.jpg">
+    <img src="f33.jpg">
+    <img src="f36.jpg">
+    <img src="f34.jpg">
+    <img src="f35.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+         <p>Hey Swati! 💛</p>
+
+<p>It’s so hard to believe that this farewell is here. We’ve been together since 1st grade, and over all these years, you’ve become so much more than just a friend—you’re my sister, my safe place, my person 🤍. From van rides to walks in the park, from lazy summer mornings at your house to late evenings when I’d return home, every moment with you has been full of laughter, fun, and memories I’ll cherish forever 🚐🌳.</p>
+
+<p>Summer vacations at your place were always the highlight of my year 🌞. I could just walk in, sit, talk, laugh, and feel completely at home. Those mornings filled with endless chatter, little snacks, silly arguments, and sometimes serious heart-to-heart talks—it felt like nothing could go wrong as long as we were together. You’re the person I can share anything with, the one I trust with my secrets, fears, and happiness 💕.</p>
+
+<p>Our talks, walks, and those little adventures—sometimes quiet, sometimes full of laughter—made life lighter and brighter. You’ve been there for me in ways I can’t even put into words. Just knowing I could come to you anytime, and that you’d understand without me having to explain much, is something I’ll always be grateful for 🫶.</p>
+
+<p>Now, as you step into your doctor journey 🩺✨, I feel proud and a little emotional. I know you’ll shine, not just because of your talent and hard work, but because of the kind, caring, and amazing person you are. I’ll miss our everyday fun, the little adventures, the summer mornings, and just being able to be near you. But I also know that this new chapter is going to bring you incredible experiences and growth 💫.</p>
+
+<p>This isn’t really goodbye—it’s just a new step. I’ll always be here for you, cheering for you, missing you, and keeping our memories close to my heart 🏡💛. Walk boldly, laugh freely, and shine bright, my sister. The world is ready for the amazing doctor you’re going to become 🌟.</p>
+
+<p>With all my love and endless good wishes,  
+Drakshii 💖</p>
+
+    <button id="nextBtn">Next →</button>
+  </div>
+
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let imgs=document.querySelectorAll(".photo-box img");
+let i=0;
+let slider=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* FINAL SLIDE + TYPE */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;setTimeout(type,80);
+  }
+}
+
+nextBtn.onclick=()=>{
+  clearInterval(slider);
+  imgs.forEach(img=>img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

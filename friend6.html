@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Darshil 🤍</title>
+<style>
+body{
+  margin:0;height:100vh;width:100vw;
+  background:#f3ede4;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Georgia",serif;overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;width:100%;height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;height:80px;border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px;color:#6e5b82}
+
+/* LETTER */
+.letter{
+  position:absolute;top:0;left:0;
+  width:90%;height:90%;
+  background:#faf6ef;
+  display:flex;gap:20px;
+  padding:20px;box-sizing:border-box;
+  opacity:0;border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;background:#fff3f0;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+.photo-box img,.final-slide{
+  width:100%;height:100%;
+  display:none;
+  align-items:center;justify-content:center;
+}
+.photo-box img{object-fit:contain}
+.photo-box img.active,
+.final-slide.active{display:flex}
+
+/* FINAL SLIDE */
+.final-slide{
+  font-size:28px;
+  font-style:italic;
+  color:#6b4b3e;
+  text-align:center;
+  padding:20px;
+}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;line-height:1.6;
+  color:#4f3b2a;
+}
+.text-box p{margin-bottom:16px}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="f61.jpg" class="active">
+    <img src="f64.jpg">
+    <img src="f62.jpg">
+    <img src="f63.jpg">
+    <img src="f65.jpg">
+    <img src="f66.jpg">
+    <img src="f67.jpg">
+    <img src="f68.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+<p>Darshil… my forever brother 🤍🫂</p>
+
+<p>Darshil… my forever brother 🤍🫂</p>
+
+<p>Some bonds don’t start suddenly—they grow quietly, over years, without us even realizing how deep they’ve gone. We’ve known each other since childhood 🧒✨, back when my sister’s dance class was basically our playground. That place wasn’t just about dance—it was about laughing freely, being kids, running around, teasing each other, and creating memories without knowing they’d stay with us forever 💃😂.</p>
+
+<p>We danced together, laughed together, and even ended up in the same drum class 🥁—like life kept putting us in the same spaces again and again. Back then, it all felt normal. Easy. Simple. But now when I look back, I realize how special those moments really were 🌈.</p>
+
+<p>Then life did its thing… and somehow, through SCL and the van 🚐, we met again. Different people, older, carrying our own struggles—but the comfort was still there. Like no time had passed. We started talking again, sharing problems, listening, understanding, and slowly becoming each other’s safe place when things got heavy 🫂.</p>
+
+<p>You’ve been there for me in ways that matter the most 🤍. When things got complicated, when misunderstandings hurt—especially with Nirmay—you stood by me like a shield 🛡️. You listened without judging, protected without asking, and supported me when I needed it the most. That kind of presence is rare, and I’ll always be grateful for you.</p>
+
+<p>I also saw you break 💔. Your recent breakup hurt you deeply, and it wasn’t easy watching you go through that pain. But even in that phase, you never stopped believing in love. You chose hope again 🌱. Planning, giving chances, trusting—your strength quietly amazed me. And I know, deep down, things will find their way for you.</p>
+
+<p>Sometimes, we don’t even need words. A single look 👁️‍🗨️. One moment of eye contact. And we already know what the other is thinking. That comfort, that understanding—it’s something only real bonds have 💫.</p>
+
+<p>Garba nights 💃✨—planning, teasing, roasting each other, laughing endlessly. No photos together 📸❌, but countless memories stored safely in my heart 💛. Because some connections don’t need proof—they just exist.</p>
+
+<p>You’ve always been my best brother 🤍. Not by blood, but by choice. By presence. By care. By standing beside me when it mattered. And that’s stronger than anything.</p>
+
+<p>This farewell hurts 🥀. Because it feels like closing a chapter filled with warmth, laughter, shared pain, and quiet strength. But I know this isn’t the end. It’s just life changing lanes 🚦.</p>
+
+<p>No matter where we go, you’ll always have a place in my life. I’ll always be here—for talks, for silence, for teasing, for support 🤞. Distance can never erase childhood bonds, shared struggles, or brotherhood 🤍.</p>
+<p>And before this letter ends, I want you to remember who you are and where you’re going ⚽🔥. Football is not just a game for you—it’s your passion, your escape, your strength. I’ve seen the discipline, the hunger, the way you give your heart to it even when things are heavy. No heartbreak, no setback, no bad phase can take that away from you 💪🤍. Keep running, keep training, keep believing—even on days when it feels hard. I know you’ll reach places you’re dreaming of, and one day I’ll proudly say, “I knew him when he was chasing this dream” 🌟. All the best for everything ahead—football, life, and everything in between. I’ll always be cheering for you, my brother 🫂⚽.</p>
+
+
+<p>Thank you—for being my shield, my comfort, my laughter, my strength. You’ll always be my best brother. Always 🫂💫.</p>
+
+<button id="nextBtn">Next →</button>
+  </div>
+
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let imgs=document.querySelectorAll(".photo-box img");
+let i=0;
+let slider=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* FINAL SLIDE + TYPE */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;setTimeout(type,80);
+  }
+}
+
+nextBtn.onclick=()=>{
+  clearInterval(slider);
+  imgs.forEach(img=>img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

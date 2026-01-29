@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nirmay 💜</title>
+<style>
+body{
+  margin:0;height:100vh;width:100vw;
+  background:#f3ede4;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Georgia",serif;overflow:hidden;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:90%;height:90%;
+  position:absolute;
+  background:#e8dccb;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+  z-index:10;
+}
+.flap{
+  position:absolute;width:100%;height:100%;
+  background:#e2d4c1;
+  clip-path:polygon(0 0,100% 0,100% 50%,50% 60%,0 50%);
+}
+.seal{
+  width:80px;height:80px;border-radius:50%;
+  background:radial-gradient(circle at top left,#e7d9f0,#b9a6c9);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.seal::before{content:"🧸";font-size:32px;color:#6e5b82}
+
+/* LETTER */
+.letter{
+  position:absolute;top:0;left:0;
+  width:90%;height:90%;
+  background:#faf6ef;
+  display:flex;gap:20px;
+  padding:20px;box-sizing:border-box;
+  opacity:0;border-radius:12px;
+  transition:opacity 1s ease;
+}
+
+/* PHOTO BOX */
+.photo-box{
+  flex:1;background:#fff3f0;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+.photo-box img,.final-slide{
+  width:100%;height:100%;
+  display:none;
+  align-items:center;justify-content:center;
+}
+.photo-box img{object-fit:contain}
+.photo-box img.active,
+.final-slide.active{display:flex}
+
+/* FINAL SLIDE */
+.final-slide{
+  font-size:28px;
+  font-style:italic;
+  color:#6b4b3e;
+  text-align:center;
+  padding:20px;
+}
+
+/* TEXT BOX */
+.text-box{
+  flex:1;background:#fff9e5;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;line-height:1.6;
+  color:#4f3b2a;
+}
+.text-box p{margin-bottom:16px}
+#nextBtn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;border-radius:20px;
+  background:#c9a98b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+  <div class="seal" id="seal"></div>
+</div>
+
+<div class="letter" id="letter">
+
+  <div class="photo-box">
+    <img src="f41.jpg" class="active">
+    <img src="f42.jpg">
+    <img src="f43.jpg">
+    <img src="f44.jpg">
+    <img src="45.jpg">
+    <img src="46.jpg">
+    <img src="47.jpg">
+    <img src="48.jpg">
+    <img src="49.jpg">
+    <img src="411.jpg">
+    <img src="412.jpg">
+    <img src="413.jpg">
+
+    <!-- FINAL SLIDE -->
+    <div class="final-slide" id="finalSlide">
+      <p id="typeText"></p>
+    </div>
+  </div>
+
+  <div class="text-box">
+     <p>Nirmay… 🤍🫂</p>
+<p>If someone had told me years ago that you would become this important to me, I would’ve laughed it off 😅. We were around each other for so long—same van 🚐, same routes, same space—yet complete strangers. Just familiar faces passing by, no real conversations, no idea of what was coming 🌫️.</p>
+
+<p>And then 2024 happened 📅. Because of school, MUN 🏫📑, and the time when you weren’t well 🤍, we actually started talking. Slowly. Naturally. No force, no expectations. Just conversations that quietly turned into something meaningful. From strangers ➡️ friends ➡️ best friends ➡️ my person 💫. And honestly, I didn’t even realize when you became such a huge part of my life.</p>
+
+<p>Today, you are the first person I talk to every single day 🌅📱 and the last one before I sleep 🌙. Every small detail, every thought, every random thing—I tell you everything. Every decision I make feels incomplete without your approval ✔️🫶. Your opinion matters to me more than you know, and somewhere along the way, you became my constant, my comfort, my everything 🤍.</p>
+
+<p>We fought. A lot 😅🔥. We misunderstood each other, got irritated, argued, said things in the heat of the moment. But not once did it change what we are. No fight ever pushed us apart. No argument ever made me want to lose you. Somehow, after everything, we always came back stronger, calmer, and more sure of each other 🤝✨.</p>
+
+<p>Your absence… it scares me 🥀. It haunts me more than I admit. The thought of not having you around, not talking to you daily, not sharing everything—it hurts 💔. Because you’re not just someone I talk to. You’re someone I rely on. Someone who feels like home 🏠. Someone whose presence makes even bad days feel bearable 🫂.</p>
+
+<p>This farewell is not going to be easy 😔. Saying goodbye to someone who went from nothing to everything feels unfair. It feels sudden. It feels heavy. But I also know this—what we share is not something distance can erase 🌍💫. It took time, trust, fights, laughter, patience, and honesty to build this bond, and bonds like that don’t disappear.</p>
+
+<p>Please remember this always 🧿—you are irreplaceable to me. No one can take your place. No one can fill that space. You are my best friend, my safe person, my constant 🤍. Losing daily access to you doesn’t mean losing you.</p>
+
+<p>I love you so, so much 💖🥹. And I will miss you more than words can ever explain. But this isn’t the end of us—it’s just life changing its pace. No matter where we go, no matter how busy life gets, you’ll always be someone my heart holds close 💓.</p>
+
+<p>Thank you—for choosing me, for staying, for understanding me, for fighting and still never leaving 🤞✨. From strangers ➡️ friends ➡️ best friends ➡️ one of the biggest parts of my life. That journey means everything to me 🌈.</p>
+
+<p>This isn’t goodbye🫂🤍. This is just us learning how to exist a little farther apart, without ever letting go 💫.</p>
+
+    <button id="nextBtn">Next →</button>
+  </div>
+
+</div>
+
+<audio id="song" src="song.mp3" loop></audio>
+
+<script>
+/* OPEN ENVELOPE */
+seal.onclick=()=>{
+  envelope.style.opacity="0";
+  setTimeout(()=>{
+    envelope.style.display="none";
+    letter.style.opacity="1";
+    song.play().catch(()=>{});
+  },1000);
+};
+
+/* SLIDESHOW */
+let imgs=document.querySelectorAll(".photo-box img");
+let i=0;
+let slider=setInterval(()=>{
+  imgs[i].classList.remove("active");
+  i=(i+1)%imgs.length;
+  imgs[i].classList.add("active");
+},2500);
+
+/* FINAL SLIDE + TYPE */
+const text="Thank you for everything.\n– Drakshi";
+let c=0;
+function type(){
+  if(c<text.length){
+    typeText.innerHTML+=text[c]=="\n"?"<br>":text[c];
+    c++;setTimeout(type,80);
+  }
+}
+
+nextBtn.onclick=()=>{
+  clearInterval(slider);
+  imgs.forEach(img=>img.classList.remove("active"));
+  finalSlide.classList.add("active");
+  typeText.innerHTML="";
+  c=0;
+  type();
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Passkey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #f8cdda, #fbd3c1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: rgba(255,255,255,0.9);
+      padding: 50px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: #9bbcd1;
+      color: white;
+      cursor: pointer;
+    }
+    p.error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Enter Your Passkey</h2>
+  <input type="password" id="keyInput" placeholder="Enter key">
+  <br>
+  <button onclick="checkKey()">Submit</button>
+  <p class="error" id="errorMsg"></p>
+</div>
+
+<script>
+  /* Passkey → page mapping */
+  const passkeys = {
+    "3003": "friend1.html",
+    "0501": "friend2.html",
+    "1012": "friend3.html",
+    "1212": "friend4.html",
+    "3005": "friend5.html",
+    "2509": "friend6.html",
+    "0507": "friend7.html",
+    "0812": "friend8.html",
+    "1234": "friend9.html",
+    "1512": "friend10.html"
+  };
+
+  function checkKey() {
+    const input = document.getElementById("keyInput").value.trim();
+    const error = document.getElementById("errorMsg");
+
+    if (passkeys[input]) {
+      window.location.href = passkeys[input];
+    } else {
+      error.innerText = "Incorrect passkey. Try again!";
+    }
+  }
+</script>
+
+</body>
+</html>
